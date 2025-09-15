@@ -2,7 +2,7 @@
 <html lang="km">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>កម្មវិធីគ្រប់គ្រងរបាយការណ៍វត្តមាន</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Library for reading Excel files -->
@@ -20,7 +20,7 @@
 <body class="bg-gray-100 min-h-screen">
 
     <!-- Login Overlay -->
-    <div id="login-overlay" class="hidden fixed inset-0 bg-gray-100 flex items-center justify-center z-50">
+    <div id="login-overlay" class="fixed inset-0 bg-gray-100 flex items-center justify-center z-50">
         <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
             <div class="text-center mb-8">
                 <h1 class="text-3xl font-bold text-gray-800 table-header">សូមចូលប្រើប្រាស់ប្រព័ន្ធ</h1>
@@ -59,24 +59,26 @@
 
     <!-- Main Application -->
     <div id="main-app" class="hidden p-4">
-        <div class="w-full bg-white rounded-2xl shadow-lg p-6 md:p-8 relative">
-            <div class="absolute top-6 right-6 flex items-center space-x-4">
-                <a href="https://darotrb0-bit.github.io/UpdateScanDIDaily/" target="_blank" title="ភ្ជាប់កម្មវិធីរបាយការណ៍" class="text-gray-400 hover:text-blue-600 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                    </svg>
-                </a>
-                <button id="logout-btn" title="ចាកចេញពីប្រព័ន្ធ" class="text-gray-400 hover:text-red-600 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 table-header">កម្មវិធីគ្រប់គ្រងរបាយការណ៍វត្តមាន</h1>
-                <p class="text-gray-500 mt-2">នាំចូល (Import) ឯកសារ Excel ដើម្បីបង្ហាញ និងរក្សាទុកទិន្នន័យ</p>
+        <div class="w-full bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <div class="relative">
+                 <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 table-header">កម្មវិធីគ្រប់គ្រងរបាយការណ៍វត្តមាន</h1>
+                    <p class="text-gray-500 mt-2">នាំចូល (Import) ឯកសារ Excel ដើម្បីបង្ហាញ និងរក្សាទុកទិន្នន័យ</p>
+                </div>
+                <div class="absolute top-0 right-0 flex space-x-2">
+                    <a href="https://darotrb0-bit.github.io/UpdateScanDIDaily/" target="_blank" title="ភ្ជាប់កម្មវិធីរបាយការណ៍" class="p-2 text-gray-500 hover:text-blue-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                    </a>
+                     <button id="logout-btn" title="ចាកចេញ" class="p-2 text-gray-500 hover:text-red-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <!-- File Upload Section -->
@@ -140,8 +142,7 @@
 
     <script>
         // --- CONFIGURATION ---
-        const googleAppScriptUrl = 'https://script.google.com/macros/s/AKfycbwCE6IrUDM_O4MP-5tCAiPPgpBGSmZUIXGoTRzHhdjN3p33QR6uU0sJdvdVyEOfyMz-/exec';
-        const AUTH_KEY = 'attendanceAppLoggedInUser';
+        const googleAppScriptUrl = 'https://script.google.com/macros/s/AKfycbx1KErI37zcGzm6hTBQATrLHxg6Wc0zuUvTQ9G8iaR5l3NMO8aQzy0mtQ7MzOjEveB_9A/exec';
 
         // --- DOM ELEMENTS ---
         const loginOverlay = document.getElementById('login-overlay');
@@ -169,37 +170,40 @@
         let attendanceData = [];
         let rowIndexToDelete = null;
         let timerInterval = null;
-        let selectedEmail = null; // Store selected email for verification
+        let selectedEmail = null; 
 
-        // --- INITIALIZATION ---
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem(AUTH_KEY) === 'true') {
+        // --- LOGIN & SESSION LOGIC ---
+        document.addEventListener('DOMContentLoaded', checkLoginSession);
+        sendOtpBtn.addEventListener('click', handleSendOtp);
+        verifyOtpBtn.addEventListener('click', handleVerifyOtp);
+        logoutBtn.addEventListener('click', handleLogout);
+
+        function checkLoginSession() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
                 loginOverlay.classList.add('hidden');
                 mainApp.classList.remove('hidden');
             } else {
                 loginOverlay.classList.remove('hidden');
                 mainApp.classList.add('hidden');
             }
-        });
+        }
 
-        // --- LOGIN & LOGOUT LOGIC ---
-        sendOtpBtn.addEventListener('click', handleSendOtp);
-        verifyOtpBtn.addEventListener('click', handleVerifyOtp);
-        logoutBtn.addEventListener('click', () => {
-            localStorage.removeItem(AUTH_KEY);
-            window.location.reload();
-        });
-
-        function showLoginStatus(message, isError = false) {
-            loginStatus.textContent = message;
-            loginStatus.className = `mt-4 text-center ${isError ? 'text-red-500' : 'text-green-500'}`;
+        function handleLogout() {
+            localStorage.removeItem('loggedInUser');
+            checkLoginSession();
         }
 
         function maskEmail(email) {
             if (!email || email.indexOf('@') === -1) return '';
-            const [localPart, domain] = email.split('@');
-            if (localPart.length <= 1) return `*@${domain}`;
-            return `${localPart[0]}***@${domain}`;
+            const [name, domain] = email.split('@');
+            if (name.length <= 3) return `${name[0]}***@${domain}`;
+            return `${name.substring(0, 3)}***@${domain}`;
+        }
+
+        function showLoginStatus(message, isError = false) {
+            loginStatus.textContent = message;
+            loginStatus.className = `mt-4 text-center ${isError ? 'text-red-500' : 'text-green-500'}`;
         }
 
         async function handleSendOtp() {
@@ -218,7 +222,9 @@
 
             try {
                 const response = await fetch(googleAppScriptUrl, {
-                    method: 'POST', mode: 'cors', headers: { 'Content-Type': 'text/plain' },
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: { 'Content-Type': 'text/plain' },
                     body: JSON.stringify({ action: 'sendOtp', email: selectedEmail, name: name }),
                     redirect: 'follow'
                 });
@@ -229,7 +235,7 @@
                 showLoginStatus('លេខកូដ OTP ត្រូវបានផ្ញើទៅកាន់អ៊ីមែលរបស់អ្នកដោយជោគជ័យ!', false);
                 document.getElementById('user-selection-section').classList.add('hidden');
                 otpSection.classList.remove('hidden');
-                userEmailDisplay.textContent = maskEmail(selectedEmail);
+                userEmailDisplay.innerHTML = maskEmail(selectedEmail);
                 startTimer();
 
             } catch (error) {
@@ -252,7 +258,9 @@
 
             try {
                 const response = await fetch(googleAppScriptUrl, {
-                    method: 'POST', mode: 'cors', headers: { 'Content-Type': 'text/plain' },
+                    method: 'POST',
+                    mode: 'cors',
+                    headers: { 'Content-Type': 'text/plain' },
                     body: JSON.stringify({ action: 'verifyOtp', email: selectedEmail, otp: enteredOtp }),
                     redirect: 'follow'
                 });
@@ -261,10 +269,9 @@
                 if (result.status !== 'success') throw new Error(result.message);
 
                 showLoginStatus('ការផ្ទៀងផ្ទាត់បានជោគជ័យ!', false);
+                localStorage.setItem('loggedInUser', selectedEmail); // Save session
                 clearInterval(timerInterval);
-                localStorage.setItem(AUTH_KEY, 'true'); // Set login state
-                loginOverlay.classList.add('hidden');
-                mainApp.classList.remove('hidden');
+                checkLoginSession(); // Show main app
 
             } catch (error) {
                 console.error("Error verifying OTP:", error);
@@ -278,7 +285,7 @@
         
         function startTimer() {
             let duration = 60;
-            timerDisplay.textContent = '01:00';
+            timerDisplay.textContent = '01:00'; 
             
             timerInterval = setInterval(() => {
                 duration--;
